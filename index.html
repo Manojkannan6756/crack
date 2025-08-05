@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revathi Crackers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>Revathi Crackers</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section home">
+    <h2>Welcome to Revathi Crackers</h2>
+    <p>Celebrate Diwali with our premium Sivakasi crackers at the best prices in Tamil Nadu style!</p>
+    <a href="#orders" class="btn">Shop Now</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2>About Us</h2>
+    <p>Revathi Crackers is a traditional Sivakasi-based crackers shop bringing joy to every festival.
+       We provide <b>sparklers, bijili, chakkara, waala, bombs, rockets, and sky shots</b>.
+       Celebrate safely and happily with our quality-tested crackers.</p>
+  </section>
+
+  <!-- Orders Section -->
+  <section id="orders" class="section orders">
+    <h2>Order Crackers Online</h2>
+
+    <div class="filters">
+      <button onclick="filterProducts('all')">All</button>
+      <button onclick="filterProducts('sparklers')">Sparklers</button>
+      <button onclick="filterProducts('bijili')">Bijili</button>
+      <button onclick="filterProducts('chakkara')">Chakkara</button>
+      <button onclick="filterProducts('waala')">Waala</button>
+      <button onclick="filterProducts('bomb')">Bombs</button>
+      <button onclick="filterProducts('rockets')">Rockets</button>
+      <button onclick="filterProducts('sky')">Sky Shots</button>
+    </div>
+
+    <div class="products" id="product-list">
+      <!-- JS will load products here -->
+    </div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div class="cart" id="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <button class="btn" onclick="checkout()">Checkout</button>
+  </div>
+  
+  <!--section-->
+ <section id="contact" class="section contact">
+  <h2>Place Your Order</h2>
+  <form id="orderForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="address" placeholder="Address" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+
+    <label>Payment Method:</label>
+    <select id="paymentMethod" required>
+      <option value="cod">Cash on Delivery</option>
+      <option value="upi">Pay via UPI (GPay / PhonePe / Paytm)</option>
+    </select>
+
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>📧 revathicrackers@gmail.com | 📞 +91 9788855894</p>
+    <p>Follow us on 
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
